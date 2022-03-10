@@ -257,19 +257,17 @@ function breakStatement(numero) {
   //Pista: usá el statement 'break'
   // Tu código:
 var nuevoarray = [];
-  i = 0
-  do {
-        numero = numero + 2;
-        i++;
-        nuevoarray.push(numero)
-        if(numero === i){
-          return "Se interrumpió la ejecución"
-        }
+var suma = numero
+
+  for (i = 0 ; i < 10 ; i++){
+    suma = suma + 2;
+    nuevoarray.push(suma);
+    if( suma === i){
+      break;
+    }
   }
-  while (i < 10);
-
-  return nuevoarray;
-
+  if(suma === i)   return "Se interrumpió la ejecución";
+  else return nuevoarray;
 }
 
 
@@ -281,20 +279,17 @@ function continueStatement(numero) {
   //Pista: usá el statement 'continue'
   // Tu código:
   var nuevoarray = [];
-  i = 0
-  do {
-        numero = numero + 2;
-        i++;
-        nuevoarray.push(numero)
-        if(i === 5){
-          i++;
-        }
+  var suma = numero
+  
+    for (i = 0 ; i < 10 ; i++){
+      suma = suma + 2;
+      nuevoarray.push(suma);
+      if( i === 5){
+        continue;
+      }
+    }
+    return nuevoarray;
   }
-  while (i < 10);
-
-  return nuevoarray;
-
-}
 
 // No modificar nada debajo de esta línea
 // --------------------------------
